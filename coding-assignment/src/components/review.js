@@ -6,8 +6,6 @@ export default class Review extends React.Component {
     }
 
     render() {
-        console.log(this.props);
-        console.log(this.props.review);
         return (
             <div id="paragraph">
                 <p>{this.props.review}</p>

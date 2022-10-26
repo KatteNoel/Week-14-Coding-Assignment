@@ -1,9 +1,17 @@
 body {
-  background-color: black !important;
+  background-color: #2e222f !important;
   margin: 1rem !important;
 }
 
 img {
   margin: auto;
   display: block;
+}
+
+.card {
+  background-color: #c7dcd0 !important;
+}
+
+.btn {
+  background-color: #0eaf9b !important;
 }

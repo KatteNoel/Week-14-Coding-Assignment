@@ -16,7 +16,7 @@ export default class Movie extends React.Component {
                     <img src={this.props.imgSource} alt="The movie's poster." className="w-50"></img>
                 </div>
                 <div className="card-footer">
-                    <ReviewList />
+                    <ReviewList {...this.props}/>
                 </div>
             </div>
         );

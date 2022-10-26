@@ -9,15 +9,18 @@ export default class MovieList extends React.Component {
         let movies = [
             {
                 name: 'Star Wars',
-                imgSource: StarWars
+                imgSource: StarWars,
+                id: 1
             },
             {
                 name: 'Twilight',
-                imgSource: Twilight
+                imgSource: Twilight,
+                id: 2
             },
             {
                 name: 'The Room',
-                imgSource: TheRoom
+                imgSource: TheRoom,
+                id: 3
             }
         ];
 

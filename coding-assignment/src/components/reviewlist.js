@@ -4,38 +4,33 @@ import ReviewForm from './reviewform';
 import Stars from './stars';
 
 export default class ReviewList extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             stars: 0,
-            review: ''
+            review: '',
+            id: props.id
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-        //submit input of starsInput to stars
-        //submit input of reviewInput to review
-        console.log("clicked");
-        console.log(document.getElementById('starsInput').value);
-        console.log(document.getElementById('reviewInput').value)
-        //document.getElementById('paragraph').innerHTML = document.getElementById('reviewInput').innerHTML; 
-        //this.state.stars = document.getElementById('starsInput');
         this.setState({
-            stars: document.getElementById('starsInput').value,
-            review: document.getElementById('reviewInput').value
+            stars: document.getElementById(`starsInput${this.props.id}`).value,
+            review: document.getElementById(`reviewInput${this.props.id}`).value
         });
+
+        document.getElementById(`starsInput${this.props.id}`).value = '';
+        document.getElementById(`reviewInput${this.props.id}`).value = '';
     }
 
     render() {
-        console.log(this.state.stars);
-        console.log(this.state.review);
         return (
             <div>
-                <Stars {...this.state.stars}/>
-                <Review {...this.state.review}/>
-                <ReviewForm />
-                <button className="btn btn-primary" id="submit" onClick={this.handleClick}>Submit</button>
+                <Stars {...this.state}/>
+                <Review {...this.state}/>
+                <ReviewForm {...this.state}/>
+                <button className="btn" id="submit" onClick={this.handleClick}>Submit</button>
             </div>
         );
     }
