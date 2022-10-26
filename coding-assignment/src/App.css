@@ -1,0 +1,9 @@
+body {
+  background-color: black !important;
+  margin: 1rem !important;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
