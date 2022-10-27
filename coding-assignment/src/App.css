@@ -15,3 +15,7 @@ img {
 .btn {
   background-color: #0eaf9b !important;
 }
+
+.card-header {
+  text-align: center !important;
+}
